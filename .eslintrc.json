@@ -53,7 +53,6 @@
     "no-implied-eval": ["error"],
     "no-iterator": ["error"],
     "no-loop-func": ["error"],
-    "no-magic-numbers": ["error"],
     "no-multi-spaces": ["error"],
     "no-multi-str": ["error"],
     "no-new-wrappers": ["error"],

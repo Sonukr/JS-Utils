@@ -2,5 +2,28 @@
   "compilerOptions": {
     "baseUrl": "src"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "source": {
+    "includePattern": ".+\\.js(doc|x)?$",   // Only process file ending in .js, .jsdoc or .jsx
+    "include": ["."],                       // Check all folders.
+    "exclude": ["node_modules", "dist"]             // Be gone, node_modules.
+  },
+  "recurseDepth": 10,                         // Only go 10 levels deep.
+  "opts": {
+      "readme": "./README.md",
+      "destination": "./docs/",               // Where I want my docs to be generated.
+      "recurse": true,                        // Same as using -r or --recurse
+      "template": "node_modules/clean-jsdoc-theme",
+      "outputSourceFiles": false,
+      "theme_opts": {
+        "outputSourcePath": false,
+        "title":"JS-utils-pack",
+         "create_style": "nav > h2 > a{font-size: 24px} .details{display:none}", // This will apply filter to my-custom-class
+         "add_scripts": "(function foo(){console.log('foo')}())"
+      }
+  },
+  
+  "plugins": [
+    "plugins/markdown"
+  ]
 } 
