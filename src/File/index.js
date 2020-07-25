@@ -31,7 +31,7 @@ export function getFileType (url) {
 }
 
 /**
- * @description
+ * @description Get File Size in GB,MB, KB and bytes
  * @param {number} size
  * @returns {string}  file size in GB, MB, KB, bytes and byte
  * @example
