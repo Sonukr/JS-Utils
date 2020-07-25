@@ -5,15 +5,15 @@ import { log } from '../Logger/index';
  * @function isObject
  * @example
  * // Calls the `isObject` function to validate data
- * isObject([1,2,3]) 
+ * isObject([1,2,3])
  * // return false
  * isObject('This is a string')
  *  // return false
- * isObject({name: Array}) 
+ * isObject({name: Array})
  * // return true
- * isObject(null) 
+ * isObject(null)
  * // return false
- * isObject(undefined) 
+ * isObject(undefined)
  * // return false
  * @param data {any} Data to be validate
  * @returns {boolean} true | false
@@ -28,11 +28,11 @@ export function isObject (data) {
  * @param {string | number} value
  * @returns {string} Object key name based on passed value
  * @example
- * getKeyNameByValue({name: "Person", age: 30}, 30); 
+ * getKeyNameByValue({name: "Person", age: 30}, 30);
  * // return age
- * getKeyNameByValue({name: "Person", age: 30}, 'Person'); 
+ * getKeyNameByValue({name: "Person", age: 30}, 'Person');
  * // return name
- * getKeyNameByValue({name: "Person", age: 30}, 'age'); 
+ * getKeyNameByValue({name: "Person", age: 30}, 'age');
  * // return null
  */
 export function getKeyNameByValue ( obj, value) {
@@ -57,7 +57,7 @@ export function getKeyNameByValue ( obj, value) {
  * {id: 2, name: "User", location: "Delhi"}];
  * removeObjFromArray(
  *  arr, 1
- * ); 
+ * );
  * // return [{id: 2, name: "User", location: "Delhi"}]
  */
 export function removeObjFromArray (arrOfObj, id) {
@@ -81,7 +81,7 @@ export function removeObjFromArray (arrOfObj, id) {
  * sliceObjectKeys(Obj, ['Loc']) // return {Loc: "Anywhere"}
  * sliceObjectKeys(
  *  Obj, ['Loc', "id", "name"]
- * ) 
+ * )
  * // return {name: "Test", Loc: "Anywhere", id: 1}
  */
 export function sliceObjectKeys (object, keys) {

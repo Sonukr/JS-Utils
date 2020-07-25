@@ -3,15 +3,15 @@
  * @function isArray
  * @example
  * // Calls the `isArray` function to validate data
- * isArray([1,2,3]) 
+ * isArray([1,2,3])
  * // return true
- * isArray('This is a string') 
+ * isArray('This is a string')
  * // return false
- * isArray({name: Array}) 
+ * isArray({name: Array})
  * // return false
- * isArray(null) 
+ * isArray(null)
  * // return false
- * isArray(undefined) 
+ * isArray(undefined)
  * // return false
  * @param array {any} Data to be validate
  * @returns {boolean} True | False
