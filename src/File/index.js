@@ -8,7 +8,8 @@ import { ONE, TWO, FILE_SIZE_KB, FILE_SIZE_MB,
  * @param {string} url
  * @returns {string} A string with actual file name
  * @example
- * const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js"
+ * const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js";
+ *
  * getFileName(fileName)
  * // return "index.js"
  */
@@ -22,7 +23,8 @@ export function getFileName (url) {
  * @param {string} url
  * @returns {string} Type of file
  * @example
- * const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js"
+ * const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js";
+ *
  * getFileType(fileName)
  * // return "js"
  */
