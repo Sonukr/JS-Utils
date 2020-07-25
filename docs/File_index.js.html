@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Logger/index.js</title>
+    <title>File/index.js</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -51,7 +51,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Logger/index.js</h1>
+    <h1 class="page-title">File/index.js</h1>
     
 
     
@@ -61,70 +61,68 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/* eslint-disable no-console */
-const styles =
-  'font-size: 14px;' +
-  'border-radius: 2px; color: #ffffff;'+
-  'padding: 3px 5px 3px 5px; line-height: 16px;';
-/**
- * Logs a message and object on console, use this instead of console.log
- * @param {string} message
- * @param {any} data
- * @example log('This is an apple', 'iPhone')
- */
-export function log (message, data) {
-  if (data) {
-
-    console.log(
-      `%c ${message} `, `${styles} background: #001628;`, data
-    );
-  } else {
-
-    console.log(
-      `%c ${message} `, `${styles} background: #001628;`
-    );
-  }
-}
+            <pre class="prettyprint source linenums"><code>
+import { ONE, TWO, FILE_SIZE_KB, FILE_SIZE_MB,
+  FILE_SIZE_GB
+} from '../Constant/constant';
 
 /**
- * Logs error on console, use this instead of console.log
- * @param {string} message
- * @param {string} error
- * @example logError('This is an error', '3+2=6')
- */
-export function logError (message, error) {
-  // always log errors, even in production env
-  if (error) {
-    console.error(
-      `%c ${message} `, `${styles} background: #dc3545;`, error
-    );
-  } else {
-    console.error(
-      `%c ${message} `, `${styles} background: #dc3545;`
-    );
-  }
-}
-
-/**
- * Logs a deprecation message
- * @param message {string}
- * @param hard {boolean} - should this be a strong warning?
+ * @description Get actual file name from a system file url
+ * @param {string} url
+ * @returns {string} A string with actual file name
  * @example
- * logDeprecation('This method is about to deprecate')
- * logDeprecation('This method is about to deprecate', true)
+ * const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js"
+ * getFileName(fileName)
+ * // return "index.js"
  */
-export function logDeprecation (message, hard=false) {
-  if (hard) {
-    console.error(
-      '%c --------DEPRECATION WARNING--------',
-      `${styles} background: #dc3545;`, `\n${message}`
-    );
+export function getFileName (url) {
+  return url.substr(url.lastIndexOf('/')+ONE);
+}
+
+/**
+ *
+ * @description Get File type extension
+ * @param {string} url
+ * @returns {string} Type of file
+ * @example
+ * const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js"
+ * getFileType(fileName)
+ * // return "js"
+ */
+export function getFileType (url) {
+  return (url.substr(url.lastIndexOf('.')+ONE)).toLowerCase();
+}
+
+/**
+ * @description Get File Size in GB,MB, KB and bytes
+ * @param {number} size
+ * @returns {string}  file size in GB, MB, KB, bytes and byte
+ * @example
+ * getFileSize(230000)
+ * // return "224.61 KB"
+ *
+ * getFileSize(2300000)
+ * // return "2.19 MB"
+ *
+ * getFileSize(2300000000)
+ * // return "2.14 GB"
+ */
+export function getFileSize (size) {
+  let fileSize ='';
+  if(size>=FILE_SIZE_GB) {
+    fileSize=(size/FILE_SIZE_GB).toFixed(TWO)+' GB';
+  } else if (size>=FILE_SIZE_MB) {
+    fileSize=(size/FILE_SIZE_MB).toFixed(TWO)+' MB';
+  } else if (size>=FILE_SIZE_KB) {
+    fileSize=(size/FILE_SIZE_KB).toFixed(TWO)+' KB';
+  } else if (size>ONE) {
+    fileSize=size+' bytes';
+  } else if (size===ONE) {
+    fileSize=size+' byte';
   } else {
-    console.warn(
-      '%c --------DEPRECATION WARNING--------',
-      `${styles} background: #ffc107;`, `\n ${message}`
-    );
+    fileSize='0 byte';
   }
+  return fileSize;
 }</code></pre>
         </article>
     </section>

@@ -46,7 +46,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html"><div class="text">JS-utils-pack</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#getKeyNameByValue">getKeyNameByValue</a></li><li><a href="global.html#isArray">isArray</a></li><li><a href="global.html#isObject">isObject</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#logDeprecation">logDeprecation</a></li><li><a href="global.html#logError">logError</a></li><li><a href="global.html#removeObjFromArray">removeObjFromArray</a></li><li><a href="global.html#sliceObjectKeys">sliceObjectKeys</a></li></ul></div>
+    <h2><a href="index.html"><div class="text">JS-utils-pack</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#getFileName">getFileName</a></li><li><a href="global.html#getFileSize">getFileSize</a></li><li><a href="global.html#getFileType">getFileType</a></li><li><a href="global.html#getKeyNameByValue">getKeyNameByValue</a></li><li><a href="global.html#isArray">isArray</a></li><li><a href="global.html#isObject">isObject</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#logDeprecation">logDeprecation</a></li><li><a href="global.html#logError">logError</a></li><li><a href="global.html#removeObjFromArray">removeObjFromArray</a></li><li><a href="global.html#sliceObjectKeys">sliceObjectKeys</a></li></ul></div>
 </nav>
 
 <div id="main">
@@ -72,8 +72,31 @@
     <section class="readme">
         <article><h1>JS-utils-pack</h1>
 <p>A collection of utilities we used in daily life while making a web app.</p>
+<hr>
+<p><img src="https://github.com/Sonukr/JS-Utils/workflows/Node.js%20CI/badge.svg?branch=master" alt="Node.js CI">
+<a href="https://opensource.org/licenses/isc"><img src="https://img.shields.io/badge/License-ISC-green.svg" alt="MIT license"></a>
+<a href="https://www.npmjs.com/package/js-utils-pack"><img src="https://badge.fury.io/js/js-utils-pack.svg" alt="npm version"></a></p>
 <h3>How to use</h3>
-<p><a href="https://sonukr.github.io/JS-Utils/docs/">Documentation</a></p></article>
+<p><a href="https://sonukr.github.io/JS-Utils/docs/index.html">Documentation</a></p>
+<p>Install the package from npm by using.</p>
+<pre class="prettyprint source lang-sh"><code>  npm install js-utils-pack
+</code></pre>
+<p>Once installed, Import the packge in your working file and use it.</p>
+<p>Here you have two options to import the method, one is default and seconf one is named import.</p>
+<h4>Default import</h4>
+<pre class="prettyprint source lang-js"><code>  import JSutils from 'js-utils-pack' // Now you can use a method by calling it.
+
+  // ex - 
+  Jsutils.log('Yuppie...!!', 'it's Working.')
+
+</code></pre>
+<h4>Named Import</h4>
+<pre class="prettyprint source lang-js"><code>  import {log} from 'js-utils-pack' // Now you can use a method by calling it.
+
+  // ex - 
+  log('Yuppie...!!', 'it's Working.')
+
+</code></pre></article>
     </section>
 
 
@@ -92,7 +115,7 @@
 <script>prettyPrint();</script>
 <script src="scripts/linenumber.js"></script>
 <script>
-var list = [{"title":"getKeyNameByValue","link":"<a href=\"global.html#getKeyNameByValue\">Global &rtrif; getKeyNameByValue</a>"},{"title":"isArray","link":"<a href=\"global.html#isArray\">Global &rtrif; isArray</a>"},{"title":"isObject","link":"<a href=\"global.html#isObject\">Global &rtrif; isObject</a>"},{"title":"log","link":"<a href=\"global.html#log\">Global &rtrif; log</a>"},{"title":"logDeprecation","link":"<a href=\"global.html#logDeprecation\">Global &rtrif; logDeprecation</a>"},{"title":"logError","link":"<a href=\"global.html#logError\">Global &rtrif; logError</a>"},{"title":"removeObjFromArray","link":"<a href=\"global.html#removeObjFromArray\">Global &rtrif; removeObjFromArray</a>"},{"title":"sliceObjectKeys","link":"<a href=\"global.html#sliceObjectKeys\">Global &rtrif; sliceObjectKeys</a>"}];
+var list = [{"title":"getFileName","link":"<a href=\"global.html#getFileName\">Global &rtrif; getFileName</a>"},{"title":"getFileSize","link":"<a href=\"global.html#getFileSize\">Global &rtrif; getFileSize</a>"},{"title":"getFileType","link":"<a href=\"global.html#getFileType\">Global &rtrif; getFileType</a>"},{"title":"getKeyNameByValue","link":"<a href=\"global.html#getKeyNameByValue\">Global &rtrif; getKeyNameByValue</a>"},{"title":"isArray","link":"<a href=\"global.html#isArray\">Global &rtrif; isArray</a>"},{"title":"isObject","link":"<a href=\"global.html#isObject\">Global &rtrif; isObject</a>"},{"title":"log","link":"<a href=\"global.html#log\">Global &rtrif; log</a>"},{"title":"logDeprecation","link":"<a href=\"global.html#logDeprecation\">Global &rtrif; logDeprecation</a>"},{"title":"logError","link":"<a href=\"global.html#logError\">Global &rtrif; logError</a>"},{"title":"removeObjFromArray","link":"<a href=\"global.html#removeObjFromArray\">Global &rtrif; removeObjFromArray</a>"},{"title":"sliceObjectKeys","link":"<a href=\"global.html#sliceObjectKeys\">Global &rtrif; sliceObjectKeys</a>"}];
 setupSearch(list)
 </script>
 

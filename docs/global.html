@@ -46,7 +46,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html"><div class="text">JS-utils-pack</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#getKeyNameByValue">getKeyNameByValue</a></li><li><a href="global.html#isArray">isArray</a></li><li><a href="global.html#isObject">isObject</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#logDeprecation">logDeprecation</a></li><li><a href="global.html#logError">logError</a></li><li><a href="global.html#removeObjFromArray">removeObjFromArray</a></li><li><a href="global.html#sliceObjectKeys">sliceObjectKeys</a></li></ul></div>
+    <h2><a href="index.html"><div class="text">JS-utils-pack</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#getFileName">getFileName</a></li><li><a href="global.html#getFileSize">getFileSize</a></li><li><a href="global.html#getFileType">getFileType</a></li><li><a href="global.html#getKeyNameByValue">getKeyNameByValue</a></li><li><a href="global.html#isArray">isArray</a></li><li><a href="global.html#isObject">isObject</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#logDeprecation">logDeprecation</a></li><li><a href="global.html#logError">logError</a></li><li><a href="global.html#removeObjFromArray">removeObjFromArray</a></li><li><a href="global.html#sliceObjectKeys">sliceObjectKeys</a></li></ul></div>
 </nav>
 
 <div id="main">
@@ -87,6 +87,515 @@
 
     
         <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="getFileName"><span class="type-signature"></span>getFileName<span class="signature">(url)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Get actual file name from a system file url</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="File_index.js.html">File/index.js</a>, <a href="File_index.js.html#line15">line 15</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    <p>A string with actual file name</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js"
+getFileName(fileName)
+// return "index.js"</code></pre>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getFileSize"><span class="type-signature"></span>getFileSize<span class="signature">(size)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Get File Size in GB,MB, KB and bytes</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>size</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="File_index.js.html">File/index.js</a>, <a href="File_index.js.html#line47">line 47</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    <p>file size in GB, MB, KB, bytes and byte</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>getFileSize(230000)
+// return "224.61 KB"
+
+getFileSize(2300000)
+// return "2.19 MB"
+
+getFileSize(2300000000)
+// return "2.14 GB"</code></pre>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getFileType"><span class="type-signature"></span>getFileType<span class="signature">(url)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Get File type extension</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="File_index.js.html">File/index.js</a>, <a href="File_index.js.html#line29">line 29</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    <p>Type of file</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js"
+getFileType(fileName)
+// return "js"</code></pre>
+
+    </div>
+
 
         
             
@@ -275,11 +784,11 @@
     <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
         <strong>Example</strong>
         
-    <pre class="prettyprint"><code>getKeyNameByValue({name: "Person", age: 30}, 30); 
+    <pre class="prettyprint"><code>getKeyNameByValue({name: "Person", age: 30}, 30);
 // return age
-getKeyNameByValue({name: "Person", age: 30}, 'Person'); 
+getKeyNameByValue({name: "Person", age: 30}, 'Person');
 // return name
-getKeyNameByValue({name: "Person", age: 30}, 'age'); 
+getKeyNameByValue({name: "Person", age: 30}, 'age');
 // return null</code></pre>
 
     </div>
@@ -447,15 +956,15 @@ getKeyNameByValue({name: "Person", age: 30}, 'age');
         <strong>Example</strong>
         
     <pre class="prettyprint"><code>// Calls the `isArray` function to validate data
-isArray([1,2,3]) 
+isArray([1,2,3])
 // return true
-isArray('This is a string') 
+isArray('This is a string')
 // return false
-isArray({name: Array}) 
+isArray({name: Array})
 // return false
-isArray(null) 
+isArray(null)
 // return false
-isArray(undefined) 
+isArray(undefined)
 // return false</code></pre>
 
     </div>
@@ -623,15 +1132,15 @@ isArray(undefined)
         <strong>Example</strong>
         
     <pre class="prettyprint"><code>// Calls the `isObject` function to validate data
-isObject([1,2,3]) 
+isObject([1,2,3])
 // return false
 isObject('This is a string')
  // return false
-isObject({name: Array}) 
+isObject({name: Array})
 // return true
-isObject(null) 
+isObject(null)
 // return false
-isObject(undefined) 
+isObject(undefined)
 // return false</code></pre>
 
     </div>
@@ -1324,7 +1833,7 @@ logDeprecation('This method is about to deprecate', true)</code></pre>
 {id: 2, name: "User", location: "Delhi"}];
 removeObjFromArray(
  arr, 1
-); 
+);
 // return [{id: 2, name: "User", location: "Delhi"}]</code></pre>
 
     </div>
@@ -1518,7 +2027,7 @@ removeObjFromArray(
 sliceObjectKeys(Obj, ['Loc']) // return {Loc: "Anywhere"}
 sliceObjectKeys(
  Obj, ['Loc', "id", "name"]
-) 
+)
 // return {name: "Test", Loc: "Anywhere", id: 1}</code></pre>
 
     </div>
@@ -1548,7 +2057,7 @@ sliceObjectKeys(
 <script>prettyPrint();</script>
 <script src="scripts/linenumber.js"></script>
 <script>
-var list = [{"title":"getKeyNameByValue","link":"<a href=\"global.html#getKeyNameByValue\">Global &rtrif; getKeyNameByValue</a>"},{"title":"isArray","link":"<a href=\"global.html#isArray\">Global &rtrif; isArray</a>"},{"title":"isObject","link":"<a href=\"global.html#isObject\">Global &rtrif; isObject</a>"},{"title":"log","link":"<a href=\"global.html#log\">Global &rtrif; log</a>"},{"title":"logDeprecation","link":"<a href=\"global.html#logDeprecation\">Global &rtrif; logDeprecation</a>"},{"title":"logError","link":"<a href=\"global.html#logError\">Global &rtrif; logError</a>"},{"title":"removeObjFromArray","link":"<a href=\"global.html#removeObjFromArray\">Global &rtrif; removeObjFromArray</a>"},{"title":"sliceObjectKeys","link":"<a href=\"global.html#sliceObjectKeys\">Global &rtrif; sliceObjectKeys</a>"}];
+var list = [{"title":"getFileName","link":"<a href=\"global.html#getFileName\">Global &rtrif; getFileName</a>"},{"title":"getFileSize","link":"<a href=\"global.html#getFileSize\">Global &rtrif; getFileSize</a>"},{"title":"getFileType","link":"<a href=\"global.html#getFileType\">Global &rtrif; getFileType</a>"},{"title":"getKeyNameByValue","link":"<a href=\"global.html#getKeyNameByValue\">Global &rtrif; getKeyNameByValue</a>"},{"title":"isArray","link":"<a href=\"global.html#isArray\">Global &rtrif; isArray</a>"},{"title":"isObject","link":"<a href=\"global.html#isObject\">Global &rtrif; isObject</a>"},{"title":"log","link":"<a href=\"global.html#log\">Global &rtrif; log</a>"},{"title":"logDeprecation","link":"<a href=\"global.html#logDeprecation\">Global &rtrif; logDeprecation</a>"},{"title":"logError","link":"<a href=\"global.html#logError\">Global &rtrif; logError</a>"},{"title":"removeObjFromArray","link":"<a href=\"global.html#removeObjFromArray\">Global &rtrif; removeObjFromArray</a>"},{"title":"sliceObjectKeys","link":"<a href=\"global.html#sliceObjectKeys\">Global &rtrif; sliceObjectKeys</a>"}];
 setupSearch(list)
 </script>
 
