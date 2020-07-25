@@ -196,7 +196,7 @@
         <div class="details-item-container">
             <dt class="tag-source">Source:</dt>
             <dd class="tag-source"><ul class="dummy"><li>
-                <a href="File_index.js.html">File/index.js</a>, <a href="File_index.js.html#line15">line 15</a>
+                <a href="File_index.js.html">File/index.js</a>, <a href="File_index.js.html#line16">line 16</a>
             </li></ul></dd>
         </div>
     
@@ -249,7 +249,8 @@
     <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
         <strong>Example</strong>
         
-    <pre class="prettyprint"><code>const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js"
+    <pre class="prettyprint"><code>const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js";
+
 getFileName(fileName)
 // return "index.js"</code></pre>
 
@@ -364,7 +365,7 @@ getFileName(fileName)
         <div class="details-item-container">
             <dt class="tag-source">Source:</dt>
             <dd class="tag-source"><ul class="dummy"><li>
-                <a href="File_index.js.html">File/index.js</a>, <a href="File_index.js.html#line47">line 47</a>
+                <a href="File_index.js.html">File/index.js</a>, <a href="File_index.js.html#line49">line 49</a>
             </li></ul></dd>
         </div>
     
@@ -537,7 +538,7 @@ getFileSize(2300000000)
         <div class="details-item-container">
             <dt class="tag-source">Source:</dt>
             <dd class="tag-source"><ul class="dummy"><li>
-                <a href="File_index.js.html">File/index.js</a>, <a href="File_index.js.html#line29">line 29</a>
+                <a href="File_index.js.html">File/index.js</a>, <a href="File_index.js.html#line31">line 31</a>
             </li></ul></dd>
         </div>
     
@@ -590,7 +591,8 @@ getFileSize(2300000000)
     <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
         <strong>Example</strong>
         
-    <pre class="prettyprint"><code>const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js"
+    <pre class="prettyprint"><code>const fileName = "/Users/sonu/Work/Private/JS-Utils/src/index.js";
+
 getFileType(fileName)
 // return "js"</code></pre>
 
@@ -731,7 +733,7 @@ getFileType(fileName)
         <div class="details-item-container">
             <dt class="tag-source">Source:</dt>
             <dd class="tag-source"><ul class="dummy"><li>
-                <a href="Object_index.js.html">Object/index.js</a>, <a href="Object_index.js.html#line38">line 38</a>
+                <a href="Object_index.js.html">Object/index.js</a>, <a href="Object_index.js.html#line45">line 45</a>
             </li></ul></dd>
         </div>
     
@@ -786,8 +788,10 @@ getFileType(fileName)
         
     <pre class="prettyprint"><code>getKeyNameByValue({name: "Person", age: 30}, 30);
 // return age
+
 getKeyNameByValue({name: "Person", age: 30}, 'Person');
 // return name
+
 getKeyNameByValue({name: "Person", age: 30}, 'age');
 // return null</code></pre>
 
@@ -956,14 +960,19 @@ getKeyNameByValue({name: "Person", age: 30}, 'age');
         <strong>Example</strong>
         
     <pre class="prettyprint"><code>// Calls the `isArray` function to validate data
+
 isArray([1,2,3])
 // return true
+
 isArray('This is a string')
 // return false
+
 isArray({name: Array})
 // return false
+
 isArray(null)
 // return false
+
 isArray(undefined)
 // return false</code></pre>
 
@@ -1132,14 +1141,19 @@ isArray(undefined)
         <strong>Example</strong>
         
     <pre class="prettyprint"><code>// Calls the `isObject` function to validate data
+
 isObject([1,2,3])
 // return false
+
 isObject('This is a string')
  // return false
+
 isObject({name: Array})
 // return true
+
 isObject(null)
 // return false
+
 isObject(undefined)
 // return false</code></pre>
 
@@ -1776,7 +1790,7 @@ logDeprecation('This method is about to deprecate', true)</code></pre>
         <div class="details-item-container">
             <dt class="tag-source">Source:</dt>
             <dd class="tag-source"><ul class="dummy"><li>
-                <a href="Object_index.js.html">Object/index.js</a>, <a href="Object_index.js.html#line63">line 63</a>
+                <a href="Object_index.js.html">Object/index.js</a>, <a href="Object_index.js.html#line69">line 69</a>
             </li></ul></dd>
         </div>
     
@@ -1831,9 +1845,8 @@ logDeprecation('This method is about to deprecate', true)</code></pre>
         
     <pre class="prettyprint"><code>const arr = [{name: "Test", Loc: "Anywhere", id: 1, area: "Delhi"},
 {id: 2, name: "User", location: "Delhi"}];
-removeObjFromArray(
- arr, 1
-);
+
+removeObjFromArray(arr, 1);
 // return [{id: 2, name: "User", location: "Delhi"}]</code></pre>
 
     </div>
@@ -1970,7 +1983,7 @@ removeObjFromArray(
         <div class="details-item-container">
             <dt class="tag-source">Source:</dt>
             <dd class="tag-source"><ul class="dummy"><li>
-                <a href="Object_index.js.html">Object/index.js</a>, <a href="Object_index.js.html#line87">line 87</a>
+                <a href="Object_index.js.html">Object/index.js</a>, <a href="Object_index.js.html#line94">line 94</a>
             </li></ul></dd>
         </div>
     
@@ -2024,10 +2037,10 @@ removeObjFromArray(
         <strong>Example</strong>
         
     <pre class="prettyprint"><code>const Obj = {name: "Test", Loc: "Anywhere", id: 1, area: "Delhi"}
-sliceObjectKeys(Obj, ['Loc']) // return {Loc: "Anywhere"}
-sliceObjectKeys(
- Obj, ['Loc', "id", "name"]
-)
+
+sliceObjectKeys(Obj, ['Loc'])
+// return {Loc: "Anywhere"}
+sliceObjectKeys(Obj, ['Loc', "id", "name"])
 // return {name: "Test", Loc: "Anywhere", id: 1}</code></pre>
 
     </div>
