@@ -1,7 +1,8 @@
 # JS-utils-pack
 A collection of utilities we used in daily life while making a web app.
 
----------------
+______________________________________________________
+
 
 ![Node.js CI](https://github.com/Sonukr/JS-Utils/workflows/Node.js%20CI/badge.svg?branch=master)
 [![MIT license](https://img.shields.io/badge/License-ISC-green.svg)](https://opensource.org/licenses/isc)
