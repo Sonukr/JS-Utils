@@ -1,3 +1,4 @@
+/** @module Array */
 /**
  * @description Check if passed data is an valid array
  * @function isArray

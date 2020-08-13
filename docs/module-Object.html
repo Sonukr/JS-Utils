@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Object</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/search.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script> -->
+    <script src="scripts/fuse.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme.css">
+    
+      <style>
+        nav > h2 > a{font-size: 24px} .details{display:none}
+      </style>
+    
+    
+    
+<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
+    <defs>
+        <symbol id="copy-icon" viewbox="0 0 488.3 488.3">
+            <g>
+                <path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z"/>
+                <path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z"/>
+            </g>
+        </symbol>
+    </defs>
+</svg>
+
+</head>
+<body>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html"><div class="text">JS-utils-pack</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3>Modules</h3><ul><li><a href="module-Array.html">Array</a><ul class='methods'><li data-type='method'><a href="module-Array.html#~isArray">isArray</a></li></ul></li><li><a href="module-Browser.html">Browser</a><ul class='methods'><li data-type='method'><a href="module-Browser.html#~detectDeviceType">detectDeviceType</a></li></ul></li><li><a href="module-BrowserStorage.html">BrowserStorage</a><ul class='methods'><li data-type='method'><a href="module-BrowserStorage.html#~localStorage">localStorage</a></li><li data-type='method'><a href="module-BrowserStorage.html#~sessionStorage">sessionStorage</a></li></ul></li><li><a href="module-Cookies.html">Cookies</a><ul class='methods'><li data-type='method'><a href="module-Cookies.html#.getCookies">getCookies</a></li><li data-type='method'><a href="module-Cookies.html#.setCookies">setCookies</a></li></ul></li><li><a href="module-File.html">File</a><ul class='methods'><li data-type='method'><a href="module-File.html#.getFileName">getFileName</a></li><li data-type='method'><a href="module-File.html#.getFileSize">getFileSize</a></li><li data-type='method'><a href="module-File.html#.getFileType">getFileType</a></li></ul></li><li><a href="module-Logger.html">Logger</a><ul class='methods'><li data-type='method'><a href="module-Logger.html#.log">log</a></li><li data-type='method'><a href="module-Logger.html#.logDeprecation">logDeprecation</a></li><li data-type='method'><a href="module-Logger.html#.logError">logError</a></li></ul></li><li><a href="module-Object.html">Object</a><ul class='methods'><li data-type='method'><a href="module-Object.html#~getKeyNameByValue">getKeyNameByValue</a></li><li data-type='method'><a href="module-Object.html#~isObject">isObject</a></li><li data-type='method'><a href="module-Object.html#~removeObjFromArray">removeObjFromArray</a></li><li data-type='method'><a href="module-Object.html#~renameObjKeys">renameObjKeys</a></li><li data-type='method'><a href="module-Object.html#~sliceObjectKeys">sliceObjectKeys</a></li></ul></li><li><a href="module-String.html">String</a><ul class='methods'><li data-type='method'><a href="module-String.html#~decapitalize">decapitalize</a></li><li data-type='method'><a href="module-String.html#~sortCharactersInString">sortCharactersInString</a></li></ul></li></ul></div>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Object</h1>
+    
+
+    
+
+
+
+
+<section>
+
+
+<header>
+    
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~getKeyNameByValue"><span class="type-signature">(inner) </span>getKeyNameByValue<span class="signature">(obj, value)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Get Key name of a value from Object</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="Object_index.js.html">Object/index.js</a>, <a href="Object_index.js.html#line47">line 47</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    <p>Object key name based on passed value</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>getKeyNameByValue({name: "Person", age: 30}, 30);
+// return age
+
+getKeyNameByValue({name: "Person", age: 30}, 'Person');
+// return name
+
+getKeyNameByValue({name: "Person", age: 30}, 'age');
+// return null</code></pre>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~isObject"><span class="type-signature">(inner) </span>isObject<span class="signature">(data)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Check if passed data is an valid Object</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Data to be validate</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="Object_index.js.html">Object/index.js</a>, <a href="Object_index.js.html#line5">line 5</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    <p>true | false</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>// Calls the `isObject` function to validate data
+
+isObject([1,2,3])
+// return false
+
+isObject('This is a string')
+ // return false
+
+isObject({name: Array})
+// return true
+
+isObject(null)
+// return false
+
+isObject(undefined)
+// return false</code></pre>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~removeObjFromArray"><span class="type-signature">(inner) </span>removeObjFromArray<span class="signature">(arrOfObj, id)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Remove an object from array based on id</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arrOfObj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Arra.&lt;Object></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="Object_index.js.html">Object/index.js</a>, <a href="Object_index.js.html#line71">line 71</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    <p>New Array with updated Objects</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>const arr = [{name: "Test", Loc: "Anywhere", id: 1, area: "Delhi"},
+{id: 2, name: "User", location: "Delhi"}];
+
+removeObjFromArray(arr, 1);
+// return [{id: 2, name: "User", location: "Delhi"}]</code></pre>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~renameObjKeys"><span class="type-signature">(inner) </span>renameObjKeys<span class="signature">(keysMap, obj)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Replaces the names of multiple object keys
+with the values provided</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>keysMap</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="Object_index.js.html">Object/index.js</a>, <a href="Object_index.js.html#line118">line 118</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    <p>New object with updated key names</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>const obj = { name: 'John', job: 'Front-End Master', shoeSize: 100 };
+renameObjKeys({ name: 'firstName', job: 'passion' }, obj);
+// return { firstName: 'John', passion: 'Front-End Master', shoeSize: 100 }</code></pre>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~sliceObjectKeys"><span class="type-signature">(inner) </span>sliceObjectKeys<span class="signature">(object, keys)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Get trimmed Object based on Keys</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>object</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>keys</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="Object_index.js.html">Object/index.js</a>, <a href="Object_index.js.html#line96">line 96</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    <p>New object with passed keys</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>const Obj = {name: "Test", Loc: "Anywhere", id: 1, area: "Delhi"}
+
+sliceObjectKeys(Obj, ['Loc'])
+// return {Loc: "Anywhere"}
+
+sliceObjectKeys(Obj, ['Loc', "id", "name"])
+// return {name: "Test", Loc: "Anywhere", id: 1}</code></pre>
+
+    </div>
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+  
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script>
+var list = [{"title":"Array","link":"<a href=\"module-Array.html\">Array</a>"},{"title":"module:Array~isArray","link":"<a href=\"module-Array.html#~isArray\">module:Array~isArray &rtrif; undefined</a>"},{"title":"Browser","link":"<a href=\"module-Browser.html\">Browser</a>"},{"title":"module:Browser~detectDeviceType","link":"<a href=\"module-Browser.html#~detectDeviceType\">module:Browser~detectDeviceType &rtrif; undefined</a>"},{"title":"BrowserStorage","link":"<a href=\"module-BrowserStorage.html\">BrowserStorage</a>"},{"title":"module:BrowserStorage~localStorage","link":"<a href=\"module-BrowserStorage.html#~localStorage\">module:BrowserStorage~localStorage &rtrif; undefined</a>"},{"title":"module:BrowserStorage~sessionStorage","link":"<a href=\"module-BrowserStorage.html#~sessionStorage\">module:BrowserStorage~sessionStorage &rtrif; undefined</a>"},{"title":"Cookies","link":"<a href=\"module-Cookies.html\">Cookies</a>"},{"title":"module:Cookies.getCookies","link":"<a href=\"module-Cookies.html#.getCookies\">module:Cookies.getCookies &rtrif; undefined</a>"},{"title":"module:Cookies.setCookies","link":"<a href=\"module-Cookies.html#.setCookies\">module:Cookies.setCookies &rtrif; undefined</a>"},{"title":"File","link":"<a href=\"module-File.html\">File</a>"},{"title":"module:File.getFileName","link":"<a href=\"module-File.html#.getFileName\">module:File.getFileName &rtrif; undefined</a>"},{"title":"module:File.getFileSize","link":"<a href=\"module-File.html#.getFileSize\">module:File.getFileSize &rtrif; undefined</a>"},{"title":"module:File.getFileType","link":"<a href=\"module-File.html#.getFileType\">module:File.getFileType &rtrif; undefined</a>"},{"title":"Logger","link":"<a href=\"module-Logger.html\">Logger</a>"},{"title":"module:Logger.log","link":"<a href=\"module-Logger.html#.log\">module:Logger.log &rtrif; undefined</a>"},{"title":"module:Logger.logDeprecation","link":"<a href=\"module-Logger.html#.logDeprecation\">module:Logger.logDeprecation &rtrif; undefined</a>"},{"title":"module:Logger.logError","link":"<a href=\"module-Logger.html#.logError\">module:Logger.logError &rtrif; undefined</a>"},{"title":"Object","link":"<a href=\"module-Object.html\">Object</a>"},{"title":"module:Object~getKeyNameByValue","link":"<a href=\"module-Object.html#~getKeyNameByValue\">module:Object~getKeyNameByValue &rtrif; undefined</a>"},{"title":"module:Object~isObject","link":"<a href=\"module-Object.html#~isObject\">module:Object~isObject &rtrif; undefined</a>"},{"title":"module:Object~removeObjFromArray","link":"<a href=\"module-Object.html#~removeObjFromArray\">module:Object~removeObjFromArray &rtrif; undefined</a>"},{"title":"module:Object~renameObjKeys","link":"<a href=\"module-Object.html#~renameObjKeys\">module:Object~renameObjKeys &rtrif; undefined</a>"},{"title":"module:Object~sliceObjectKeys","link":"<a href=\"module-Object.html#~sliceObjectKeys\">module:Object~sliceObjectKeys &rtrif; undefined</a>"},{"title":"String","link":"<a href=\"module-String.html\">String</a>"},{"title":"module:String~decapitalize","link":"<a href=\"module-String.html#~decapitalize\">module:String~decapitalize &rtrif; undefined</a>"},{"title":"module:String~sortCharactersInString","link":"<a href=\"module-String.html#~sortCharactersInString\">module:String~sortCharactersInString &rtrif; undefined</a>"}];
+setupSearch(list)
+</script>
+
+ 
+  <script type="text/javascript">
+    (function foo(){console.log('foo')}())
+  </script>
+
+<script type="text/javascript" src="scripts/misc.js"></script>
+</body>
+</html>

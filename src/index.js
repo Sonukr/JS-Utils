@@ -2,8 +2,11 @@ import { log, logError, logDeprecation } from './Logger';
 import { isArray } from './Array';
 import { isObject, sliceObjectKeys, removeObjFromArray, renameObjKeys } from './Object';
 import { getFileName, getFileSize, getFileType } from './File';
-import { detectDeviceType } from './Browser';
+import { detectDeviceType, localStorage, sessionStorage } from './Browser';
 import { sortCharactersInString, decapitalize } from './String';
+import { getCookies, setCookies } from './Cookies';
+
+
 module.exports = {
   getFileName,
   getFileSize,
@@ -17,6 +20,10 @@ module.exports = {
   logError,
   logDeprecation,
   detectDeviceType,
+  localStorage,
+  sessionStorage,
   sortCharactersInString,
-  decapitalize
+  decapitalize,
+  getCookies,
+  setCookies
 };

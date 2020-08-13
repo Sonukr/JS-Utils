@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Logger/index.js</title>
+    <title>Cookies/index.js</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -51,7 +51,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Logger/index.js</h1>
+    <h1 class="page-title">Cookies/index.js</h1>
     
 
     
@@ -61,74 +61,66 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/* eslint-disable no-console */
-/** @module Logger */
-const base =
-  'font-size: 14px;' +
-  'border-radius: 2px; color: #ffffff;'+
-  'padding: 3px 5px 3px 5px; line-height: 16px;';
+            <pre class="prettyprint source linenums"><code>
 /**
- * Logs a message and object on console, use this instead of console.log
- * @param {string} message
- * @param {any} data
- * @example log('This is an apple', 'iPhone')
+ * @module Cookies
+ * @description Util to access cookie API
  */
-export function log (message, data) {
-  if (data) {
+const cookie = {
+  /**
+   * @function setItem
+   * @memberof module:Cookies
+   * @private
+   * @param {string} name sessionStorage key name
+   * @param {*} value data to be stored in the key
+   * @param {number} exdays days to remove the cookie
+   */
+  setItem: (name, value, exdays) => {
+    const today = new Date();
+    today.setTime(today.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    const expires = 'expires='+today.toUTCString();
+    document.cookie = name + '=' + value + ';' + expires + ';path=/';
+  },
 
-    console.log(
-      `%c ${message} `, `${base} background: #001628;`, data
-    );
-  } else {
-
-    console.log(
-      `%c ${message} `, `${base} background: #001628;`
-    );
+  /**
+   * @function getItem
+   * @private
+   * @memberof module:Cookies
+   * @param {string} name cookie key name
+   */
+  getItem: (name) => {
+    const key = name + '=';
+    const cookies = document.cookie.split(';');
+    for(let i = 0; i &lt; cookies.length; i++) {
+      let currentCookie = cookies[i];
+      while (currentCookie.charAt(0) === ' ') {
+        currentCookie = currentCookie.substring(1);
+      }
+      if (currentCookie.indexOf(key) === 0) {
+        return currentCookie.substring(key.length, currentCookie.length);
+      }
+    }
+    return '';
   }
-}
-
-
-/**
- * Logs a deprecation message
- * @param message {string}
- * @param hard {boolean} - should this be a strong warning?
- * @example
- * logDeprecation('This method is about to deprecate')
- * logDeprecation('This method is about to deprecate', true)
- */
-export function logDeprecation (message, hard=false) {
-  if (hard) {
-    console.error(
-      '%c --------DEPRECATION WARNING--------',
-      `${base} background: #dc3545;`, `\n${message}`
-    );
-  } else {
-    console.warn(
-      '%c --------DEPRECATION WARNING--------',
-      `${base} background: #ffc107;`, `\n ${message}`
-    );
-  }
-}
+};
 
 /**
- * Logs error on console, use this instead of console.log
- * @param {string} message
- * @param {string} error
- * @example logError('This is an error', '3+2=6')
+ * @function setCookies
+ * @memberof module:Cookies
+ * @param {string} name sessionStorage key name
+ * @param {*} value data to be stored in the key
+ * @param {number} exdays number of days to remove the cookie from browser
  */
-export function logError (message, error) {
-  // always log errors, even in production env
-  if (error) {
-    console.error(
-      `%c ${message} `, `${base} background: #dc3545;`, error
-    );
-  } else {
-    console.error(
-      `%c ${message} `, `${base} background: #dc3545;`
-    );
-  }
-}
-</code></pre>
+const setCookies = (name, value, exdays) => cookie.setItem(name, value, exdays);
+
+/**
+ * @function getCookies
+ * @memberof module:Cookies
+ * @param {string} name cookie key name
+ */
+const getCookies = (name) => cookie.getItem(name);
+
+export{ setCookies, getCookies };</code></pre>
         </article>
     </section>
 

@@ -3,7 +3,7 @@ import { ONE, TWO, ONE_KB, ONE_MB,
   ONE_GB
 } from '../Constant/constant';
 
-
+/** @module File*/
 /**
  * @description Get File Size in GB,MB, KB and bytes
  * @param {number} size

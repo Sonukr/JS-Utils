@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Logger/index.js</title>
+    <title>Logger</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -51,86 +51,553 @@
 
 <div id="main">
     
-    <h1 class="page-title">Logger/index.js</h1>
+    <h1 class="page-title">Logger</h1>
     
 
     
 
 
 
+
+<section>
+
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/* eslint-disable no-console */
-/** @module Logger */
-const base =
-  'font-size: 14px;' +
-  'border-radius: 2px; color: #ffffff;'+
-  'padding: 3px 5px 3px 5px; line-height: 16px;';
-/**
- * Logs a message and object on console, use this instead of console.log
- * @param {string} message
- * @param {any} data
- * @example log('This is an apple', 'iPhone')
- */
-export function log (message, data) {
-  if (data) {
-
-    console.log(
-      `%c ${message} `, `${base} background: #001628;`, data
-    );
-  } else {
-
-    console.log(
-      `%c ${message} `, `${base} background: #001628;`
-    );
-  }
-}
+        
+    
+</header>
 
 
-/**
- * Logs a deprecation message
- * @param message {string}
- * @param hard {boolean} - should this be a strong warning?
- * @example
- * logDeprecation('This method is about to deprecate')
- * logDeprecation('This method is about to deprecate', true)
- */
-export function logDeprecation (message, hard=false) {
-  if (hard) {
-    console.error(
-      '%c --------DEPRECATION WARNING--------',
-      `${base} background: #dc3545;`, `\n${message}`
-    );
-  } else {
-    console.warn(
-      '%c --------DEPRECATION WARNING--------',
-      `${base} background: #ffc107;`, `\n ${message}`
-    );
-  }
-}
+<article>
+    <div class="container-overview">
+    
+        
 
-/**
- * Logs error on console, use this instead of console.log
- * @param {string} message
- * @param {string} error
- * @example logError('This is an error', '3+2=6')
- */
-export function logError (message, error) {
-  // always log errors, even in production env
-  if (error) {
-    console.error(
-      `%c ${message} `, `${base} background: #dc3545;`, error
-    );
-  } else {
-    console.error(
-      `%c ${message} `, `${base} background: #dc3545;`
-    );
-  }
-}
-</code></pre>
-        </article>
-    </section>
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".log"><span class="type-signature">(static) </span>log<span class="signature">(message, data)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Logs a message and object on console, use this instead of console.log</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="Logger_index.js.html">Logger/index.js</a>, <a href="Logger_index.js.html#line13">line 13</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>log('This is an apple', 'iPhone')</code></pre>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".logDeprecation"><span class="type-signature">(static) </span>logDeprecation<span class="signature">(message, hard)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Logs a deprecation message</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>hard</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>should this be a strong warning?</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="Logger_index.js.html">Logger/index.js</a>, <a href="Logger_index.js.html#line36">line 36</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>logDeprecation('This method is about to deprecate')
+logDeprecation('This method is about to deprecate', true)</code></pre>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".logError"><span class="type-signature">(static) </span>logError<span class="signature">(message, error)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Logs error on console, use this instead of console.log</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="Logger_index.js.html">Logger/index.js</a>, <a href="Logger_index.js.html#line56">line 56</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>logError('This is an error', '3+2=6')</code></pre>
+
+    </div>
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

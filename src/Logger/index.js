@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+/** @module Logger */
 const base =
   'font-size: 14px;' +
   'border-radius: 2px; color: #ffffff;'+

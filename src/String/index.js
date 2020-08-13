@@ -1,3 +1,4 @@
+/** @module String */
 /**
  * @description Alphabetically sorts the characters in a string.
  * @param {String} str

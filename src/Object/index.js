@@ -1,5 +1,7 @@
 import { FIRST_INDEX } from '../Constant';
 import { log } from '../Logger/index';
+
+/** @module Object */
 /**
  * @description Check if passed data is an valid Object
  * @function isObject
