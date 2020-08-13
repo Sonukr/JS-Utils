@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Array/index.js</title>
+    <title>Browser/index.js</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -51,7 +51,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Array/index.js</h1>
+    <h1 class="page-title">Browser/index.js</h1>
     
 
     
@@ -62,36 +62,22 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @description Check if passed data is an valid array
- * @function isArray
+ * @description It will return the device type
+ * @param {}
+ * @returns {string} Returns the devide type.
  * @example
- * // Calls the `isArray` function to validate data
- *
- * isArray([1,2,3])
- * // return true
- *
- * isArray('This is a string')
- * // return false
- *
- * isArray({name: Array})
- * // return false
- *
- * isArray(null)
- * // return false
- *
- * isArray(undefined)
- * // return false
- *
- * @param array {any} Data to be validate
- * @returns {boolean} True | False
+ * const device = detectDeviceType()
+ * // return 'Mobile' on mobile and 'Desktop' on desktop
  */
-export function isArray (array) {
-  if(array) {
-    return Array.isArray(array);
-  }
-  return false;
-}
-</code></pre>
+const detectDeviceType = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+  navigator.userAgent
+)? 'Mobile': 'Desktop';
+
+
+
+export {
+  detectDeviceType
+};</code></pre>
         </article>
     </section>
 

@@ -1,9 +1,9 @@
 import { log, logError, logDeprecation } from './Logger';
 import { isArray } from './Array';
-import { isObject, sliceObjectKeys, removeObjFromArray } from './Object';
+import { isObject, sliceObjectKeys, removeObjFromArray, renameObjKeys } from './Object';
 import { getFileName, getFileSize, getFileType } from './File';
-
-
+import { detectDeviceType } from './Browser';
+import { sortCharactersInString, decapitalize } from './String';
 module.exports = {
   getFileName,
   getFileSize,
@@ -12,7 +12,11 @@ module.exports = {
   isObject,
   sliceObjectKeys,
   removeObjFromArray,
+  renameObjKeys,
   log,
   logError,
-  logDeprecation
+  logDeprecation,
+  detectDeviceType,
+  sortCharactersInString,
+  decapitalize
 };

@@ -33,7 +33,7 @@
     "no-var": "error",
     "no-alert": "error",
     "prefer-const": "error",
-    "max-len": ["error"],
+    "max-len": ["error", 120],
     "block-scoped-var": ["error"],
     "consistent-return": ["error"],
     "curly": ["error", "all"],

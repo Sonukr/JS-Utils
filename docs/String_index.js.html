@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Array/index.js</title>
+    <title>String/index.js</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -51,7 +51,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Array/index.js</h1>
+    <h1 class="page-title">String/index.js</h1>
     
 
     
@@ -62,36 +62,33 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @description Check if passed data is an valid array
- * @function isArray
+ * @description Alphabetically sorts the characters in a string.
+ * @param {String} str
+ * @returns {String} Alphabetically sorted string.
  * @example
- * // Calls the `isArray` function to validate data
- *
- * isArray([1,2,3])
- * // return true
- *
- * isArray('This is a string')
- * // return false
- *
- * isArray({name: Array})
- * // return false
- *
- * isArray(null)
- * // return false
- *
- * isArray(undefined)
- * // return false
- *
- * @param array {any} Data to be validate
- * @returns {boolean} True | False
+ * sortCharactersInString('cabbage');
+ * // return 'aabbceg'
  */
-export function isArray (array) {
-  if(array) {
-    return Array.isArray(array);
-  }
-  return false;
-}
-</code></pre>
+const sortCharactersInString = str => [...str].sort((a, b) => a.localeCompare(b)).join('');
+
+/**
+ * @description Decapitalizes the first letter of a string.
+ * @param {String} String
+ * @param {Boolean} upperRest
+ * @example
+ * decapitalize('FooBar');
+ * // return'fooBar'
+ *
+ * decapitalize('FooBar', true);
+ * // return 'fOOBAR'
+ */
+const decapitalize = ([first, ...rest], upperRest = false) => first.toLowerCase() +
+(upperRest ? rest.join('').toUpperCase() : rest.join(''));
+
+export {
+  sortCharactersInString,
+  decapitalize
+};</code></pre>
         </article>
     </section>
 

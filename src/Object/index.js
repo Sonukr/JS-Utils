@@ -23,7 +23,7 @@ import { log } from '../Logger/index';
  * @param data {any} Data to be validate
  * @returns {boolean} true | false
  */
-export function isObject (data) {
+function isObject (data) {
   return (typeof data === 'object' && !Array.isArray(data) && data !== null);
 }
 
@@ -42,7 +42,7 @@ export function isObject (data) {
  * getKeyNameByValue({name: "Person", age: 30}, 'age');
  * // return null
  */
-export function getKeyNameByValue ( obj, value) {
+function getKeyNameByValue ( obj, value) {
   for( const prop in obj ) {
     if( obj.hasOwnProperty( prop ) ) {
       if( obj[ prop ] === value ) {
@@ -66,7 +66,7 @@ export function getKeyNameByValue ( obj, value) {
  * removeObjFromArray(arr, 1);
  * // return [{id: 2, name: "User", location: "Delhi"}]
  */
-export function removeObjFromArray (arrOfObj, id) {
+function removeObjFromArray (arrOfObj, id) {
   try{
     const toDelete = new Set([id]);
     return arrOfObj.filter(obj => !toDelete.has(obj.id));
@@ -91,7 +91,7 @@ export function removeObjFromArray (arrOfObj, id) {
  * sliceObjectKeys(Obj, ['Loc', "id", "name"])
  * // return {name: "Test", Loc: "Anywhere", id: 1}
  */
-export function sliceObjectKeys (object, keys) {
+function sliceObjectKeys (object, keys) {
   return Object.keys(object)
     .filter(function (key) {
       return keys.indexOf(key) >= FIRST_INDEX;
@@ -101,3 +101,32 @@ export function sliceObjectKeys (object, keys) {
       return acc;
     }, {});
 }
+
+/**
+ * @description Replaces the names of multiple object keys
+ * with the values provided
+ * @param {Object} keysMap
+ * @param {Object} obj
+ * @returns {Object} New object with updated key names
+ * @example
+ * const obj = { name: 'John', job: 'Front-End Master', shoeSize: 100 };
+ * renameObjKeys({ name: 'firstName', job: 'passion' }, obj);
+ * // return { firstName: 'John', passion: 'Front-End Master', shoeSize: 100 }
+ */
+function renameObjKeys (keysMap, obj) {
+  return Object.keys(obj).reduce(
+    (acc, key) => ({
+      ...acc,
+      ...{ [keysMap[key] || key]: obj[key] }
+    }),
+    {}
+  );
+}
+
+export {
+  isObject,
+  getKeyNameByValue,
+  removeObjFromArray,
+  sliceObjectKeys,
+  renameObjKeys
+};
