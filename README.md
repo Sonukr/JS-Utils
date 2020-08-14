@@ -13,6 +13,10 @@ ______________________________________________________
 Install the package from npm by using.
 ```sh
   npm install js-utils-pack
+  
+  or
+  
+  yarn add js-utils-pack
 ```
 Once installed, Import the packge in your working file and use it.
 
