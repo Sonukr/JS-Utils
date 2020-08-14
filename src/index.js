@@ -4,7 +4,7 @@ import { isObject, sliceObjectKeys, removeObjFromArray, renameObjKeys } from './
 import { getFileName, getFileSize, getFileType } from './File';
 import { detectDeviceType, localStorage, sessionStorage } from './Browser';
 import { sortCharactersInString, decapitalize } from './String';
-import { getCookies, setCookies } from './Cookies';
+import { setCookie, getCookie } from './Cookies';
 
 
 module.exports = {
@@ -24,6 +24,6 @@ module.exports = {
   sessionStorage,
   sortCharactersInString,
   decapitalize,
-  getCookies,
-  setCookies
+  setCookie,
+  getCookie
 };

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Browser/index.js</title>
+    <title>Cookie</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -51,119 +51,472 @@
 
 <div id="main">
     
-    <h1 class="page-title">Browser/index.js</h1>
+    <h1 class="page-title">Cookie</h1>
     
 
     
 
 
 
+
+<section>
+
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- @module Browser
- */
-/**
- * @description It will return the device type
- * @param {}
- * @returns {string} Returns the devide type.
- * @example
- * const device = detectDeviceType()
- * // return 'Mobile' on mobile and 'Desktop' on desktop
- */
-const detectDeviceType = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-  navigator.userAgent
-)? 'Mobile': 'Desktop';
+        
+            
+        
+    
+</header>
 
-/**
- * @module BrowserStorage
- * @description Util to access storage API
- */
-const browserStorage = (storageType = 'sessionStorage') => ({
-  /**
-   * @function setItem
-   * @private
-   * @memberof module:BrowserStorage
-   * @param {string} key sessionStorage/localStorage key name, default is sessionStorage.
-   * @param {*} value data to be stored in the key
-   */
-  setItem: (key, value) => window[storageType].setItem(key, JSON.stringify(value)),
 
-  /**
-   * @function getItem
-   * @private
-   * @memberof module:BrowserStorage
-   * @param {string} key sessionStorage/localStorage key name
-   */
-  getItem: key => {
-    const data = window[storageType].getItem(key);
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p>Util to access cookie API</p></div>
+        
 
-    return data ? JSON.parse(data) : '';
-  },
-  /**
-   * @function removeItem
-   * @private
-   * @memberof module:BrowserStorage
-   * @param {string} key sessionStorage/localStorage key name
-   */
-  removeItem: key => window[storageType].removeItem(key),
-  /**
-   * @function clear
-   * @private
-   * @memberof module:BrowserStorage
-   */
-  clear: () => window[storageType].clear()
-});
+        
+            
 
-/**
- * @method sessionStorage
- * @description Util to access local storage API
- * @example
- * import {sessionStorage} from 'js-utils-pack';
- *
- * sessionStorage.setItem('User', 'John')
- * // This will set User in session storage
- *
- * sessionStorage.getItem('User')
- * // return "John"
- *
- * sessionStorage.removeItem('User')
- * // This will remove User from session storage
- *
- * sessionStorage.clear()
- * // This will clear entore session storage
- */
-const sessionStorage = browserStorage('sessionStorage');
 
-/**
- * @method localStorage
- * @description Util to access local storage API
- * @example
- * import {localStorage} from 'js-utils-pack';
- *
- * localStorage.setItem('User', 'John')
- * // This will set User in localstorage
- *
- * localStorage.getItem('User')
- * // return "John"
- *
- * localStorage.removeItem('User')
- * // This will remove User from localstorage
- *
- * localStorage.clear()
- * // This will clear entore localstorage
- */
-const localStorage = browserStorage('localStorage');
 
-export {
-  detectDeviceType,
-  localStorage,
-  sessionStorage
-};
-</code></pre>
-        </article>
-    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="Cookies_index.js.html">Cookies/index.js</a>, <a href="Cookies_index.js.html#line2">line 2</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".getCookie"><span class="type-signature">(static) </span>getCookie<span class="signature">(name)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>cookie key name</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="Cookies_index.js.html">Cookies/index.js</a>, <a href="Cookies_index.js.html#line58">line 58</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>import { getCookie } from 'js-utils-pack';
+
+getCookie('User');
+// This will return 'Sonu'
+&lt;h3 style="text-align: center;">Welcome to my website&lt;/h3>
+
+&lt;script src="https://embed.runkit.com">&lt;/script>
+&lt;div id="my-element">&lt;/div>
+&lt;script>var notebook = RunKit.createNotebook({
+    // the parent element for the new notebook
+    element: document.getElementById("my-element"),
+    // specify the source of the notebook
+    source: "// GeoJSON!\nvar getJSON = require(\"async-get-json\");\n\nawait getJSON(\"https://storage.googleapis.com/maps-devrel/google.json\");"</code></pre>
+
+    </div>
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".setCookie"><span class="type-signature">(static) </span>setCookie<span class="signature">(name, value, exdays)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>sessionStorage key name</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>data to be stored in the key</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>exdays</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>number of days to remove the cookie from browser</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="Cookies_index.js.html">Cookies/index.js</a>, <a href="Cookies_index.js.html#line44">line 44</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>import { setCookie } from 'js-utils-pack';
+
+setCookie('User', 'Sonu', 1)
+// This will set a user cookie with Sonu as value and one day expiration time</code></pre>
+
+    </div>
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

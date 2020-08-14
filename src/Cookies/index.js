@@ -1,6 +1,6 @@
 
 /**
- * @module Cookies
+ * @module Cookie
  * @description Util to access cookie API
  */
 const cookie = {
@@ -42,19 +42,29 @@ const cookie = {
 };
 
 /**
- * @function setCookies
- * @memberof module:Cookies
+ * @function setCookie
+ * @memberof module:Cookie
  * @param {string} name sessionStorage key name
  * @param {*} value data to be stored in the key
  * @param {number} exdays number of days to remove the cookie from browser
+ * @example
+ * import { setCookie } from 'js-utils-pack';
+ *
+ * setCookie('User', 'Sonu', 1)
+ * // This will set a user cookie with Sonu as value and one day expiration time
  */
-const setCookies = (name, value, exdays) => cookie.setItem(name, value, exdays);
+const setCookie = (name, value, exdays) => cookie.setItem(name, value, exdays);
 
 /**
- * @function getCookies
- * @memberof module:Cookies
+ * @function getCookie
+ * @memberof module:Cookie
  * @param {string} name cookie key name
+ * @example
+ * import { getCookie } from 'js-utils-pack';
+ *
+ * getCookie('User');
+ * // This will return 'Sonu'
  */
-const getCookies = (name) => cookie.getItem(name);
+const getCookie = (name) => cookie.getItem(name);
 
-export{ setCookies, getCookies };
+export{ setCookie, getCookie };

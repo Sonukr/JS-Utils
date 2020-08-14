@@ -56,12 +56,40 @@ const browserStorage = (storageType = 'sessionStorage') => ({
 /**
  * @method sessionStorage
  * @description Util to access local storage API
+ * @example
+ * import {sessionStorage} from 'js-utils-pack';
+ *
+ * sessionStorage.setItem('User', 'John')
+ * // This will set User in session storage
+ *
+ * sessionStorage.getItem('User')
+ * // return "John"
+ *
+ * sessionStorage.removeItem('User')
+ * // This will remove User from session storage
+ *
+ * sessionStorage.clear()
+ * // This will clear entore session storage
  */
 const sessionStorage = browserStorage('sessionStorage');
 
 /**
  * @method localStorage
  * @description Util to access local storage API
+ * @example
+ * import {localStorage} from 'js-utils-pack';
+ *
+ * localStorage.setItem('User', 'John')
+ * // This will set User in localstorage
+ *
+ * localStorage.getItem('User')
+ * // return "John"
+ *
+ * localStorage.removeItem('User')
+ * // This will remove User from localstorage
+ *
+ * localStorage.clear()
+ * // This will clear entore localstorage
  */
 const localStorage = browserStorage('localStorage');
 
