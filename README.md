@@ -6,7 +6,7 @@ ______________________________________________________
 ![Build](https://github.com/Sonukr/JS-Utils/workflows/Build/badge.svg)
 [![MIT license](https://img.shields.io/badge/License-ISC-green.svg)](https://opensource.org/licenses/isc)
 [![npm version](https://badge.fury.io/js/js-utils-pack.svg)](https://www.npmjs.com/package/js-utils-pack)
-
+![Repo size](https://img.shields.io/github/repo-size/Sonukr/js-utils)
 ### How to use
 [Documentation](https://sonukr.github.io/JS-Utils/docs/index.html)
 
