@@ -1,7 +1,7 @@
 
 import { ONE, TWO, ONE_KB, ONE_MB,
   ONE_GB
-} from '../Constant/constant';
+} from '../Constant';
 
 /** @module File*/
 /**
