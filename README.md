@@ -7,6 +7,9 @@ ______________________________________________________
 [![MIT license](https://img.shields.io/badge/License-ISC-green.svg)](https://opensource.org/licenses/isc)
 [![npm version](https://badge.fury.io/js/js-utils-pack.svg)](https://www.npmjs.com/package/js-utils-pack)
 ![Repo size](https://img.shields.io/github/repo-size/Sonukr/js-utils)
+![Install Size](https://badgen.net/packagephobia/install/js-utils-pack)
+![Min zip](https://img.shields.io/bundlephobia/minzip/js-utils-pack.svg)
+![Downloads](https://img.shields.io/npm/dw/js-utils-pack.svg)
 ### How to use
 [Documentation](https://sonukr.github.io/JS-Utils/docs/index.html)
 
@@ -27,7 +30,7 @@ Here you have two options to import the method, one is default and seconf one is
   import JSutils from 'js-utils-pack' // Now you can use a method by calling it.
 
   // ex - 
-  Jsutils.log('Yuppie...!!', 'it's Working.')
+  Jsutils.log('Yuppie...!!', 'This is Working.')
 
 ```
 
@@ -36,7 +39,7 @@ Here you have two options to import the method, one is default and seconf one is
   import {log} from 'js-utils-pack' // Now you can use a method by calling it.
 
   // ex - 
-  log('Yuppie...!!', 'it's Working.')
+  log('Yuppie...!!', 'This is Working.')
 
 ```
 

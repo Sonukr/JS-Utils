@@ -1,6 +1,6 @@
 {
   "name": "js-utils-pack",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A collection of js utility.",
   "main": "dist/index.js",
   "babel": {
