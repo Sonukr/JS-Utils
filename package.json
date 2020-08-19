@@ -14,14 +14,36 @@
       ]
     ]
   },
+  "jest": {
+    "collectCoverage": true,
+    "notify": true,
+    "verbose": true,
+    "collectCoverageFrom" : [
+      "src/**/*.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {  
+        "branches": 8,
+        "functions": 8,
+        "lines": 6,
+        "statements": 8
+      }
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "jsdoc": "rm -rf docs/ && ./node_modules/.bin/jsdoc -c ./jsconfig.json",
+    "jest:debug": "node --inspect node_modules/.bin/jest --runInBand",
+    "jest": "jest src/ --coverage --colors",
+    "reports":"serve coverage/lcov-report",
+    "test": "npm run jest && npm run reports",
+    "jsdoc:build": "rm -rf docs/ && ./node_modules/.bin/jsdoc -c ./jsconfig.json",
+    "jsdoc:serve" : "serve docs/",
+    "jsdoc": "npm run jsdoc:build && npm run jsdoc:serve",
     "lint": "./node_modules/.bin/eslint ./src/**/*.js",
     "lint-fix": "./node_modules/.bin/eslint ./src --fix",
-    "npm:es": "rm -rf dist/ && babel ./src -d dist --copy-files --minified",
-    "npm:build" : "npm run npm:es",
-    "npm:publish": "npm publish"
+    "npm:es": "rm -rf dist/ && babel ./src -d dist --copy-files --minified ",
+    "npm:build": "npm run npm:es",
+    "npm:publish": "npm run build && npm publish"
+    
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -29,6 +51,7 @@
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "babel-eslint": "^8.2.6",
+    "clean-jsdoc-theme": "^2.2.11",
     "eslint": "^4.11.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-babel": "^4.1.2",
@@ -36,8 +59,8 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "jsdoc": "^3.5.5",
-    "clean-jsdoc-theme": "^2.2.11"
+    "jest": "^26.4.0",
+    "jsdoc": "^3.5.5"
   },
   "repository": {
     "type": "git",
