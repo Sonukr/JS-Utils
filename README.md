@@ -30,7 +30,7 @@ Here you have two options to import the method, one is default and seconf one is
   import JSutils from 'js-utils-pack' // Now you can use a method by calling it.
 
   // ex - 
-  Jsutils.log('Yuppie...!!', 'This is Working.')
+  JSutils.log('Yuppie...!!', 'This is Working.')
 
 ```
 

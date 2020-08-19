@@ -3,7 +3,7 @@
     "baseUrl": "src"
   },
   "include": ["src"],
-  "source": {
+  "source": { // This confif file is being used for jsdoc and other base JS config
     "includePattern": ".+\\.js(doc|x)?$",   // Only process file ending in .js, .jsdoc or .jsx
     "include": ["."],                       // Check all folders.
     "exclude": ["node_modules", "dist"]             // Be gone, node_modules.
