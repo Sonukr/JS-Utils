@@ -43,7 +43,6 @@
     "npm:es": "rm -rf dist/ && babel ./src -d dist --copy-files --minified ",
     "npm:build": "npm run npm:es",
     "npm:publish": "npm run build && npm publish"
-    
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
